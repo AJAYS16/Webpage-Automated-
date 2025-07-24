@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajay Shivaji | AI/ML Engineer Portfolio</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Typed.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <style>
+    :root{
+      --bg:#0d1117;
+      --card:#161b22;
+      --accent:#4ffbdf;
+      --text:#e6edf3;
+    }
+
+    /* Reset & Base */
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    /* Global Layout */
+    .section{padding:80px 5%;text-align:center;opacity:0;transform:translateY(40px);transition:.8s ease-out;}
+    .section.show{opacity:1;transform:translateY(0);}
+    h2{font-size:2rem;margin-bottom:1.5rem;font-weight:600;}
+
+    /* HERO */
+    #hero{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#0d1117 0%,#07121c 100%);
+      position:relative;
+      text-align:center;
+    }
+    #hero h1{font-size:3rem;margin-bottom:.5rem;}
+    #hero h2{font-weight:300;color:#c0c8d0;}
+    #typed{font-size:1.15rem;color:var(--accent);margin-top:1rem;}
+
+    .buttons{display:flex;gap:20px;margin-top:2.5rem;flex-wrap:wrap;justify-content:center;}
+    .btn{
+      text-decoration:none;
+      padding:12px 32px;
+      border-radius:30px;
+      font-weight:600;
+      transition:transform .3s ease,background .3s ease,color .3s ease;
+      cursor:pointer;
+    }
+    .btn.primary{background:var(--accent);color:#000;}
+    .btn.primary:hover{transform:translateY(-5px);background:#33d0b4;}
+    .btn.outline{
+      border:2px solid var(--accent);
+      color:var(--accent);
+    }
+    .btn.outline:hover{
+      background:var(--accent);
+      color:#000;
+      transform:translateY(-5px);
+    }
+
+    /* TECH STACK */
+    #tech .marquee{
+      overflow:hidden;
+      white-space:nowrap;
+      margin-top:40px;
+    }
+    #tech .track{
+      display:inline-block;
+      padding-left:100%;
+      animation:scroll 18s linear infinite;
+    }
+    #tech span{font-size:1.1rem;letter-spacing:.1rem;}
+    @keyframes scroll{
+      0%{transform:translateX(0)}
+      100%{transform:translateX(-100%)}
+    }
+
+    /* PROJECTS */
+    .cards{
+      display:grid;
+      gap:30px;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      margin-top:40px;
+    }
+    .card{
+      background:var(--card);
+      padding:32px;
+      border-radius:15px;
+      transition:transform .3s ease,box-shadow .3s ease;
+    }
+    .card h3{margin-bottom:.75rem;font-size:1.3rem;font-weight:600;}
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 20px 25px rgba(0,0,0,.5);
+    }
+
+    /* CONTACT */
+    form{max-width:600px;margin:0 auto;margin-top:40px;}
+    .input-group{position:relative;margin-bottom:30px;}
+    input,textarea{
+      width:100%;
+      padding:12px 16px;
+      background:var(--card);
+      border:none;
+      border-radius:10px;
+      color:var(--text);
+      resize:none;
+    }
+    input:focus,textarea:focus{outline:none;box-shadow:0 0 0 2px var(--accent);}
+    label{
+      position:absolute;
+      left:18px;
+      top:50%;
+      transform:translateY(-50%);
+      color:#888;
+      pointer-events:none;
+      transition:.3s ease;
+    }
+    input:focus+label,
+    input:not(:placeholder-shown)+label,
+    textarea:focus+label,
+    textarea:not(:placeholder-shown)+label{
+      top:-10px;
+      left:14px;
+      font-size:.75rem;
+      background:var(--bg);
+      padding:0 4px;
+      color:var(--accent);
+    }
+
+    /* FOOTER */
+    footer{
+      background:var(--card);
+      padding:25px 5%;
+      text-align:center;
+      font-size:.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:600px){
+      #hero h1{font-size:2.2rem;}
+      #typed{font-size:1rem;}
+      .buttons{flex-direction:column;gap:15px;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <header id="hero">
+    <h1>Ajay Shivaji</h1>
+    <h2>AI Engineer&nbsp;|&nbsp;Cloud Practitioner</h2>
+    <div id="typed"></div>
+
+    <div class="buttons">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="MLOps-Resume.pdf" class="btn outline" download>Download Resume</a>
+    </div>
+  </header>
+
+  <!-- TECH STACK -->
+  <section id="tech" class="section">
+    <h2>Tech&nbsp;Stack</h2>
+    <div class="marquee">
+      <div class="track">
+        <span>
+          Python • MySQL • AWS • Docker • GitHub Actions • Power BI • OpenCV • Deep Learning • NLP • Linux • Git • VPC • CloudWatch • Lambda • CNN • RNN • S3 • EC2 • Terraform • Route&nbsp;53 • RDS • IAM • ASG • ELB
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About&nbsp;Me</h2>
+    <p>
+      I’m a passionate engineer who transforms ideas into production-ready AI solutions while architecting resilient cloud infrastructure.<br>
+      My mission is to automate workflows, drive innovation, and deliver data-driven products that delight users.
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Agentic AI&nbsp;Blog Generator</h3>
+        <p>
+          Scrapes real-time tweets and leverages the Llama 3 model to craft structured, image-rich blogs at scale.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Cloud-Driven DevOps Pipeline</h3>
+        <p>
+          End-to-end CD/CP on AWS using CodePipeline, CodeDeploy, CloudWatch, and SNS for zero-downtime releases.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Safe&nbsp;&amp;&nbsp;Scalable Network</h3>
+        <p>
+          Designed a secure VPC with IGW, NAT Gateway, and segmented subnets to balance performance and protection.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Contact&nbsp;Me</h2>
+    <form>
+      <div class="input-group">
+        <input type="text" required placeholder=" " id="name">
+        <label for="name">Name</label>
+      </div>
+      <div class="input-group">
+        <input type="email" required placeholder=" " id="email">
+        <label for="email">Email</label>
+      </div>
+      <div class="input-group">
+        <textarea rows="4" required placeholder=" " id="message"></textarea>
+        <label for="message">Message</label>
+      </div>
+      <button type="submit" class="btn primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Ajay Shivaji. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for Typing & Scroll Animations -->
+  <script>
+    /* Typed.js initialization */
+    new Typed('#typed', {
+      strings: ['I build AI systems.', 'I automate with cloud.'],
+      typeSpeed: 60,
+      backSpeed: 30,
+      backDelay: 1800,
+      loop: true
+    });
+
+    /* Section reveal on scroll */
+    const sections = document.querySelectorAll('.section');
+    const options = {
+      threshold: 0.2
+    };
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+</body>
+</html>
