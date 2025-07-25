@@ -34,16 +34,38 @@ document.querySelector('form[action="https://formspree.io/f/mgvzkeyb"]').addEven
     : '<div style="padding:40px 0;font-size:1.2rem;color:red;">Oops! Something went wrong. Please try again.</div>';
 });
 
-// Digital clock (12-hour format with AM/PM)
+// Toggle clock between time and date on click
+let showDate = false;
+const clockEl = document.getElementById('clock');
+
+clockEl.addEventListener('click', function () {
+  if (!showDate) {
+    const now = new Date();
+    const dateStr = now.toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    clockEl.textContent = dateStr;
+    showDate = true;
+  } else {
+    showDate = false;
+    updateClock();
+  }
+});
+
+// Update time every second only if not showing date
 function updateClock() {
+  if (showDate) return;
   const now = new Date();
   let h = now.getHours();
   const m = String(now.getMinutes()).padStart(2, '0');
   const s = String(now.getSeconds()).padStart(2, '0');
   const ampm = h >= 12 ? 'PM' : 'AM';
   h = h % 12;
-  h = h ? h : 12; // 0 should be 12
-  document.getElementById('clock').textContent = `${h}:${m}:${s} ${ampm}`;
+  h = h ? h : 12;
+  clockEl.textContent = `${h}:${m}:${s} ${ampm}`;
 }
 setInterval(updateClock, 1000);
 updateClock();
@@ -99,6 +121,26 @@ document.addEventListener('mousemove', function(e) {
 document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('mouseenter', () => card.classList.add('neon'));
   card.addEventListener('mouseleave', () => card.classList.remove('neon'));
+});
+
+// Neon effect for clock when mouse is near
+document.addEventListener('mousemove', function(e) {
+  const clock = document.getElementById('clock');
+  if (!clock) return;
+  const rect = clock.getBoundingClientRect();
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+  const clockCenterX = rect.left + rect.width / 2;
+  const clockCenterY = rect.top + rect.height / 2;
+  const dist = Math.sqrt(
+    Math.pow(mouseX - clockCenterX, 2) + Math.pow(mouseY - clockCenterY, 2)
+  );
+  // If mouse is within 120px of clock, add neon effect
+  if (dist < 120) {
+    clock.classList.add('neon');
+  } else {
+    clock.classList.remove('neon');
+  }
 });
 
 // Play click sound from local file for any button click

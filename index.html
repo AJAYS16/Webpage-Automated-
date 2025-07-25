@@ -10,129 +10,145 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- SOCIAL BAR -->
-  <div class="social-bar top-left">
-    <a href="https://www.linkedin.com/in/ajayshivaji" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
-      <!-- LinkedIn SVG -->
-      <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.036 0 3.599 2.001 3.599 4.601v5.595z"/></svg>
-    </a>
-    <a href="https://github.com/AJAYS16" target="_blank" class="social-btn github" aria-label="GitHub">
-      <!-- GitHub SVG -->
-      <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-    </a>
-    <a href="https://www.hackerrank.com/profile/ajayshivaji16" target="_blank" class="social-btn hackerrank" aria-label="HackerRank">
-      <!-- HackerRank SVG -->
-      <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M23.94 7.24c-.06-.13-.16-.23-.29-.29l-10.94-6.3c-.13-.07-.29-.07-.42 0l-10.94 6.3c-.13.07-.23.17-.29.29-.06.13-.06.27 0 .4l.01.02 10.94 18.98c.07.13.17.23.29.29.13.06.27.06.4 0 .13-.07.23-.17.29-.29l10.94-18.98.01-.02c.06-.13.06-.27 0-.4zm-11.94 15.7l-10.94-18.98 10.94-6.3 10.94 6.3-10.94 18.98zm.5-13.94c-.28 0-.5.22-.5.5v4.5c0 .28.22.5.5.5s.5-.22.5-.5v-4.5c0-.28-.22-.5-.5-.5zm0 7c-.28 0-.5.22-.5.5v1c0 .28.22.5.5.5s.5-.22.5-.5v-1c0-.28-.22-.5-.5-.5z"/></svg>
-    </a>
+  <!-- Full-screen background video -->
+  <video class="bg-video" autoplay loop muted playsinline poster="fallback.jpg">
+    <source src="Bg-video.mp4" type="video/mp4">
+    <img src="fallback.jpg" alt="Background" />
+  </video>
+  <div class="bg-overlay"></div>
+  <div class="content-wrapper">
+    <!-- SOCIAL BAR -->
+    <div class="social-bar top-left">
+      <a href="https://www.linkedin.com/in/ajayshivaji" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
+        <!-- LinkedIn SVG -->
+        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.036 0 3.599 2.001 3.599 4.601v5.595z"/></svg>
+      </a>
+      <a href="https://github.com/AJAYS16" target="_blank" class="social-btn github" aria-label="GitHub">
+        <!-- GitHub SVG -->
+        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      <a href="https://www.hackerrank.com/profile/ajayshivaji16" target="_blank" class="social-btn hackerrank" aria-label="HackerRank">
+        <!-- HackerRank SVG -->
+        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M23.94 7.24c-.06-.13-.16-.23-.29-.29l-10.94-6.3c-.13-.07-.29-.07-.42 0l-10.94 6.3c-.13.07-.23.17-.29.29-.06.13-.06.27 0 .4l.01.02 10.94 18.98c.07.13.17.23.29.29.13.06.27.06.4 0 .13-.07.23-.17.29-.29l10.94-18.98.01-.02c.06-.13.06-.27 0-.4zm-11.94 15.7l-10.94-18.98 10.94-6.3 10.94 6.3-10.94 18.98zm.5-13.94c-.28 0-.5.22-.5.5v4.5c0 .28.22.5.5.5s.5-.22.5-.5v-4.5c0-.28-.22-.5-.5-.5zm0 7c-.28 0-.5.22-.5.5v1c0 .28.22.5.5.5s.5-.22.5-.5v-1c0-.28-.22-.5-.5-.5z"/></svg>
+      </a>
+    </div>
+    <!-- HERO SECTION -->
+    <header id="hero">
+      <div class="hero-bg">
+        <video class="hero-video" autoplay loop muted playsinline poster="fallback.jpg">
+          <source src="Bg-video.mp4" type="video/mp4">
+          <!-- Fallback image for browsers that don't support video -->
+          <img src="fallback.jpg" alt="Background" />
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+      <h1 style="color: #fff;">Ajay Shivaji</h1>
+      <h2>AI Engineer&nbsp;|&nbsp;Cloud Practitioner</h2>
+      <div id="typed"></div>
+      <div class="buttons">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="MLOps-Resume.pdf" class="btn outline" download>Download Resume</a>
+      </div>
+    </header>
+    <!-- TECH STACK -->
+    <section id="tech" class="section">
+      <h2>Tech&nbsp;Stack</h2>
+      <div class="marquee">
+        <div class="track">
+          <span>
+            Python • MySQL • AWS • Docker • GitHub Actions • Power BI • OpenCV • Deep Learning • NLP • Linux • Git • VPC • CloudWatch • Lambda • CNN • RNN • S3 • EC2 • Terraform • Route&nbsp;53 • RDS • IAM • ASG • ELB
+          </span>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About&nbsp;Me</h2>
+      <p>
+        I’m a passionate engineer who transforms ideas into production-ready AI solutions while architecting resilient cloud infrastructure.<br>
+        My mission is to automate workflows, drive innovation, and deliver data-driven products that delight users.
+      </p>
+    </section>
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>ST. JOSEPH’S COLLEGE OF ENGINEERING</h3>
+          <div class="edu-location">Chennai</div>
+          <div>B.Tech in AI & ML</div>
+          <div>Nov 2021 – May 2025</div>
+          <div class="edu-score">CGPA: 7.66/10</div>
+        </div>
+        <div class="card">
+          <h3>JAWAHAR MHSS</h3>
+          <div class="edu-location">Cuddalore</div>
+          <div>HSC (Computer Science)</div>
+          <div>Jun 2020 – Jul 2021</div>
+          <div class="edu-score">Average: 84.1%</div>
+        </div>
+        <div class="card">
+          <h3>JAWAHAR MHSS</h3>
+          <div class="edu-location">Cuddalore</div>
+          <div>SSLC</div>
+          <div>Feb 2018 – Mar 2019</div>
+          <div class="edu-score">Average: 82.4%</div>
+        </div>
+      </div>
+    </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Agentic AI&nbsp;Blog Generator</h3>
+          <p>
+            Scrapes real-time tweets and leverages the Llama 3 model to craft structured, image-rich blogs at scale.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Cloud-Driven DevOps Pipeline</h3>
+          <p>
+            End-to-end CD/CP on AWS using CodePipeline, CodeDeploy, CloudWatch, and SNS for zero-downtime releases.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Safe&nbsp;&amp;&nbsp;Scalable Network</h3>
+          <p>
+            Designed a secure VPC with IGW, NAT Gateway, and segmented subnets to balance performance and protection.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact&nbsp;Me</h2>
+      <form action="https://formspree.io/f/mgvzkeyb" method="POST">
+        <div class="input-group">
+          <input type="text" required placeholder=" " name="name" id="name">
+          <label for="name">Name</label>
+        </div>
+        <div class="input-group">
+          <input type="email" required placeholder=" " name="email" id="email">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-group">
+          <textarea rows="4" required placeholder=" " name="message" id="message"></textarea>
+          <label for="message">Message</label>
+        </div>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+      © 2025 Ajay Shivaji. All rights reserved.
+    </footer>
+    <div id="clock"></div>
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
   </div>
-  <!-- HERO SECTION -->
-  <header id="hero">
-    <h1 style="color: #fff;">Ajay Shivaji</h1>
-    <h2>AI Engineer&nbsp;|&nbsp;Cloud Practitioner</h2>
-    <div id="typed"></div>
-    <div class="buttons">
-      <a href="#projects" class="btn primary">View Projects</a>
-      <a href="MLOps-Resume.pdf" class="btn outline" download>Download Resume</a>
-    </div>
-  </header>
-  <!-- TECH STACK -->
-  <section id="tech" class="section">
-    <h2>Tech&nbsp;Stack</h2>
-    <div class="marquee">
-      <div class="track">
-        <span>
-          Python • MySQL • AWS • Docker • GitHub Actions • Power BI • OpenCV • Deep Learning • NLP • Linux • Git • VPC • CloudWatch • Lambda • CNN • RNN • S3 • EC2 • Terraform • Route&nbsp;53 • RDS • IAM • ASG • ELB
-        </span>
-      </div>
-    </div>
-  </section>
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h2>About&nbsp;Me</h2>
-    <p>
-      I’m a passionate engineer who transforms ideas into production-ready AI solutions while architecting resilient cloud infrastructure.<br>
-      My mission is to automate workflows, drive innovation, and deliver data-driven products that delight users.
-    </p>
-  </section>
-  <!-- EDUCATION -->
-  <section id="education" class="section">
-    <h2>Education</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>ST. JOSEPH’S COLLEGE OF ENGINEERING</h3>
-        <div class="edu-location">Chennai</div>
-        <div>B.Tech in AI & ML</div>
-        <div>Nov 2021 – May 2025</div>
-        <div class="edu-score">CGPA: 7.66/10</div>
-      </div>
-      <div class="card">
-        <h3>JAWAHAR MHSS</h3>
-        <div class="edu-location">Cuddalore</div>
-        <div>HSC (Computer Science)</div>
-        <div>Jun 2020 – Jul 2021</div>
-        <div class="edu-score">Average: 84.1%</div>
-      </div>
-      <div class="card">
-        <h3>JAWAHAR MHSS</h3>
-        <div class="edu-location">Cuddalore</div>
-        <div>SSLC</div>
-        <div>Feb 2018 – Mar 2019</div>
-        <div class="edu-score">Average: 82.4%</div>
-      </div>
-    </div>
-  </section>
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Agentic AI&nbsp;Blog Generator</h3>
-        <p>
-          Scrapes real-time tweets and leverages the Llama 3 model to craft structured, image-rich blogs at scale.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Cloud-Driven DevOps Pipeline</h3>
-        <p>
-          End-to-end CD/CP on AWS using CodePipeline, CodeDeploy, CloudWatch, and SNS for zero-downtime releases.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Safe&nbsp;&amp;&nbsp;Scalable Network</h3>
-        <p>
-          Designed a secure VPC with IGW, NAT Gateway, and segmented subnets to balance performance and protection.
-        </p>
-      </div>
-    </div>
-  </section>
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2>Contact&nbsp;Me</h2>
-    <form action="https://formspree.io/f/mgvzkeyb" method="POST">
-      <div class="input-group">
-        <input type="text" required placeholder=" " name="name" id="name">
-        <label for="name">Name</label>
-      </div>
-      <div class="input-group">
-        <input type="email" required placeholder=" " name="email" id="email">
-        <label for="email">Email</label>
-      </div>
-      <div class="input-group">
-        <textarea rows="4" required placeholder=" " name="message" id="message"></textarea>
-        <label for="message">Message</label>
-      </div>
-      <button type="submit" class="btn primary">Send Message</button>
-    </form>
-  </section>
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Ajay Shivaji. All rights reserved.
-  </footer>
-  <div id="clock"></div>
-  <!-- JS Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
